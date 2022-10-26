@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        let totalBelanja = 200000
+        let uangKembali = 0
+
+        alert(`Total Belanja anda Rp. ${totalBelanja.toLocaleString()}`)
+        let totalUang   = prompt(`Masukan nominal uang anda: `)// dapat menerima data dari user dan juga menampilkan informasi
+        uangKembali = totalUang - totalBelanja
+
+            if(totalUang < totalBelanja){
+                alert("Saldo tidak cukup!")
+                console.log("Saldo tidak cukup")
+            }else{
+                alert(`Sudah terbayar, Uang kembalian anda Rp. ${uangKembali.toLocaleString()}`)
+                console.log(`Sudah terbayar, Uang kembalian anda ${uangKembali.toLocaleString()}`)
+            }
+    </script>
+</html>
