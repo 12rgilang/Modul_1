@@ -94,16 +94,16 @@ console.log(estimateMonth)
 
 // Exercise Nomer 5
 // Step1. Menentukan variabel hari terlebih dahulu
-let jmlh_hari = 10000
+let jmlh_hari = 4000
 // Step2. Menentukan Tahun
 let tahun = (jmlh_hari / 365)
-console.log(tahun.toPrecision(2))
+console.log(tahun.toPrecision(1))
 // Step3. Menentukan Bulan
 let bulan = (jmlh_hari % 365 / 30)
 console.log(bulan.toPrecision(1))
 // Step4. Menentukan Hari 
 let hari = (jmlh_hari % 365 % 30)
-console.log(hari.toPrecision(2))
+console.log(hari.toPrecision(1))
 // Step5. Menggabungkan Tahun, Bulan dan Hari
-console.log(`dari ${jmlh_hari} hari, terdapat ${tahun.toPrecision(2)} tahun, ${bulan.toPrecision(1)} bulan, dan ${hari.toPrecision(2)} hari`)
+console.log(`dari ${jmlh_hari} hari, terdapat ${tahun.toPrecision(2)} tahun, ${bulan.toPrecision(2)} bulan, dan ${hari.toPrecision(2)} hari`)
 

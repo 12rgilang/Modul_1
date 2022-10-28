@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // double statement
+    // do {
+    //   var totalBelanja = 400000; // kenapa pakai var karena di while tidak bisa diakses, karena di dalam local scope
+    //   var uangKembali = 0;
+
+    //   alert(`Total Belanja = Rp.${totalBelanja.toLocaleString()}`);
+    //   var totalUang = Number(prompt(`Silahkan Masukan Uang Anda: `));
+    //   uangKembali = totalUang - totalBelanja;
+
+    //   if (totalUang < totalBelanja) {
+    //     alert("Uang Anda Kurang!");
+    //   }else if(isNaN(totalUang)){
+    //     alert('Invalid input')
+    //   }else if(totalUang >= totalBelanja){
+    //     alert(`Transaksi Sukses! Uang Kembalian Anda ${uangKembali.toLocaleString()}`)
+    //     break;
+    //   }else{
+    //     alert(`Total Belanja = Rp.${totalBelanja.toLocaleString()}`)
+    //   }
+    // }while (totalUang < totalBelanja || isNaN(totalUang))
+
+    // or using single statements
+    do {
+      var totalBelanja = 400000; // kenapa pakai var karena di while tidak bisa diakses, karena di dalam local scope
+      var uangKembali = 0;
+
+      alert(`Total Belanja = Rp.${totalBelanja.toLocaleString()}`);
+      do{ // using lopp nested element
+      var totalUang = Number(prompt(`Silahkan Masukan Uang Anda: `));
+      uangKembali = totalUang - totalBelanja;
+      }while(isNaN(totalUang))
+
+      if (totalUang < totalBelanja) {
+        alert("Uang Anda Kurang!");
+      }else if(totalUang >= totalBelanja){
+        alert(`Transaksi Sukses! Uang Kembalian Anda ${uangKembali.toLocaleString()}`)
+        break;
+      }else{
+        alert(`Total Belanja = Rp.${totalBelanja.toLocaleString()}`)
+      }
+    }while (totalUang < totalBelanja )
+
+  </script> 
+</html>
