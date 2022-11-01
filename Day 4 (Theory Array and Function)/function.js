@@ -21,9 +21,11 @@ let PrintProgram = function(){
 PrintProgram()
 
 // Arrow Function, sama dengan expression karena harus di declare dengan variable, anonymus function dapat diiis dengan parameter
-let newProgram = () => {
-
+let newProgram = (nama, asal, umur) => {
+    console.log (` Halo nama saya,${nama}, asal dari ${asal}, umur saya ${umur} `)
 }
+
+newProgram("gilang", "tangerang", "25")
 
 // Function with Parameters & Arguments
 // parameter itu bisa lebih dari 1 dan penamaan bebas
@@ -47,7 +49,7 @@ DataDiri("Gilang", 25, "Jauh")
 // 1. Function yang hanya menjalankan sesuatu (console.log)
 // 2. Function yang menghasilkan sesuatu (return, hasil dari return akan digunakan kembali nantinya pada variable selanjytnya)
 
-function Validation(phoneNumber){
+function Validation(phoneNumber){ //phoneNumber itu parameters
     // Memvalidasi phone number agar inputan user murni angka semua
     if(phoneNumber.toString().length > 13){
     return false
@@ -60,10 +62,64 @@ function Validation(phoneNumber){
     } 
 }
 
-let result = Validation(1221)
+let result = Validation(1221) // 12221 ini disebut arguments
 
 if(result){
     console.log(" Data Sudah Benar! Register succsec")
 }else{
     console.log("Data salah !")
 }
+
+// Function with default Parameter
+let greeting = (nama = "Username") => {
+    console.log(`${nama}`)
+}
+
+greeting()// ketika argument tidak diisi maka akan terisi oleh ddefault parameter
+
+//function with Rest Parameters
+let myfunc = (a,b, ...manyMore) => {
+    console.log(a)
+    console.log(b)
+    console.log(manyMore)
+    console.log(manyMore[0], + manyMore[1]) // mengambil arguments index ke 0 dan ke1
+}
+myfunc("Makan", "Minum", "Mandi", "wajib") 
+
+//Nested Function == function didalam function
+let getMessage = () => {
+    let message = () => {  // jika ingin memangil nested function yang ini harus didalam scope
+        console.log("Pesan baru")
+    }
+    message() // jika nested function ingin dipanggil maka harus function dipanggilnya didalam scope
+    console.log("Pesan yang pertama tercetak")
+}
+
+getMessage()
+
+
+// closeure Function
+// inner Function yang dapat mengakses variable daro outer functionnya
+let panggil = () => {
+    let name = "gilang"
+
+    let cetak = () => {
+        console.log(`Hello, ${name}`)
+    }
+
+    cetak() // ini untuk memanggil function cetak, apabila function ini tidak dipanggil maka function keseluruhan tidak akan berjalan
+}
+panggil()
+
+
+//Recursive function // function yang memanggil dirinya sendiri
+let countDown = () => {
+    console.log(num) 
+
+    num-- // pengurangan num
+
+    if(num > 0){
+        countDown(num)
+    }
+}
+countDown(3)

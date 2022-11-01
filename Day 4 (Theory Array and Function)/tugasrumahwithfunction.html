@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// function
+    function CheckInput(inputUser){
+        if(inputUser < 1 || inputUser > buah.length){
+            return false 
+        }else{
+            return true
+        }
+    }
+        let buah = ["kesemek", "pepaya", "apel"]
+        let harga = [5000, 2000, 3000]
+        let stock = [1, 2, 3]
+
+        let initialWord = `Purwadhika Mart \n` // ---> \n untuk membuat break baru
+        for(let i = 0; i<buah.length; i++){
+            initialWord += `${i+1}. ${buah[i]} Harga Rp. ${harga[i].toLocaleString()} Stocknya = ${stock[i]} \n`
+        } 
+
+        do{
+            var inputUser = prompt(`${initialWord}Silahkan masukan angka`)
+            inputUser = isNaN()
+
+        if(CheckInput(inputUser) === false ){
+            alert("tidak ditemukan")
+        }else{
+            alert("ditemukan")
+        }
+    }while(CheckInput(inputUser) === false)
+
+       
+
+        
+    
+</script>
+</html>

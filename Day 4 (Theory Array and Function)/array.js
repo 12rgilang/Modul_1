@@ -75,3 +75,8 @@ let world = "Hello saya"
 console.log(world.split(" ")) // memisahkan dengan sepasi
 console.log(world.split(""))// memisahkan setiap hurup yang tidak ada spasi
 console.log(world.split("l"))
+
+// array tiga dimensi
+let arrayTigaDimensi = [[" Puwadhika", ["Digital", "School"]], 1, true, false]
+//jika inngin mengambil kata digital, maka coednya
+console.log(arrayDuaDimensi[0][1][0])

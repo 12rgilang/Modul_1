@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let produk = ["Apel","mangga","jeruk"]
+    let price = [10000,15000,20000]
+    let initialKata = "Purwadhika Mart \n"  //---> \n untuk membuat break baru (baris baru) 
+    let kata = initialKata, p = 10, a = p, x = 0;
+
+while(x<1){
+for(i=0;i<produk.length;i++){
+    // a-=2
+    kata += `${i+1}. ${produk[i]} | Price: Rp.${price[i].toLocaleString()},00 | Stock : ${a}  \n`
+    a*=2.5
+} let input = prompt(`${kata} \nMau beli buah nomer berapa?`);
+if(input >0 && input<=produk.length){
+    alert("Transaksi Berhasil")
+    x++;
+} else{alert("Input invalid")
+  kata = initialKata, a = p;
+}
+}
+
+
+    
+//alert(kata);
+</script>
+</html>
