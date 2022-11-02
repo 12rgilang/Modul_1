@@ -1,4 +1,4 @@
-// class
+// // class
 // digunakan untuk membuat sebuah object dengan nama key yang seragam
 
 
@@ -14,12 +14,12 @@
 //     }
 // }
 
-// let product1 = new Products("Mangga", 10000, 10)
-// console.log(product1)
-// let product2 = new Products("Leci", 12000, 20)
-// console.log(product2)
+// // let product1 = new Products("Mangga", 10000, 10)
+// // console.log(product1)
+// // let product2 = new Products("Leci", 12000, 20)
+// // console.log(product2)
 
-//apabila memilki data yang banyak bisa menggunakan array, maka akan dimasukkan kedalam adata paling atas
+// //apabila memilki data yang banyak bisa menggunakan array, maka akan dimasukkan kedalam adata paling atas
 // let arrProducts = [
 //     new Products("Kurma", 100000, 10),
 //     new Products("manggis", 2000, 21)
@@ -30,17 +30,17 @@
 // } 
 
 
-// Inheritance ---> Pewarisan property
-//Buah
-// 1. Nama, Harga, stok, berat, warna, satuan
-// Elektronik
-// 1. Nama, Harga, stok, berat, warna, satuan, merk, ukuran
-// pakaian
-// 1.Nama, Harga, stok, berat, warna, satuan
+// // Inheritance ---> Pewarisan property
+// //Buah
+// // 1. Nama, Harga, stok, berat, warna, satuan
+// // Elektronik
+// // 1. Nama, Harga, stok, berat, warna, satuan, merk, ukuran
+// // pakaian
+// // 1.Nama, Harga, stok, berat, warna, satuan
 
-// apabila memiliki properti yang sama maka menggunakan class inheritance
+// // apabila memiliki properti yang sama maka menggunakan class inheritance
 
-// bahasa ppembacaan dari extends  , class child ingin mengambil dari class parent
+// // bahasa ppembacaan dari extends  , class child ingin mengambil dari class parent
 
 // class NewProdutcs{ // disebut parents
 //     nama = "";
@@ -111,10 +111,10 @@
 // let user1 = new user("Gilang", "gilang.ramadhan011297@gmail.com")
 // console.log(user1)
 
-// Encapsulation
-// untuk penggunaan Data Hiding ,Increased Flexibility, Reusability , Testing code is easy
-// Getter & Setter
-// Getter
+// // Encapsulation
+// // untuk penggunaan Data Hiding ,Increased Flexibility, Reusability , Testing code is easy
+// // Getter & Setter
+// // Getter
 // class User1{
 //     name = ""; // Public Property
 //     #email = ""; //private Property karena menggunakan #
@@ -132,47 +132,47 @@
 // let user2 = new User1("Gilang", "gilang.ramadhan011297@gmail.com")
 // console.log(user2.getEmail())
 
-// Setter 
-class User1{
-    name = ""; // Public Property
-    #email = ""; //private Property karena menggunakan #
+// // Setter 
+// class User1{
+//     name = ""; // Public Property
+//     #email = ""; //private Property karena menggunakan #
 
-    constructor(name){
-        this.name = name
-        // this.#email = email // email di hidden namun dapat di ambil dengan Getter
-    }
+//     constructor(name){
+//         this.name = name
+//         // this.#email = email // email di hidden namun dapat di ambil dengan Getter
+//     }
 
-    get getEmail(){ // Getter --> untuk mengambil data khusunya data private atau data yang ingin dimodifikasi terlebih dahulu
-        if(this.#email.length !==0){
-        let modified = `******${this.#email.slice(6, this.#email.length)}`
-        return modified
-    }else{
-        return "Email tidak ada"
-    }
-}
+//     get getEmail(){ // Getter --> untuk mengambil data khusunya data private atau data yang ingin dimodifikasi terlebih dahulu
+//         if(this.#email.length !==0){
+//         let modified = `******${this.#email.slice(6, this.#email.length)}`
+//         return modified
+//     }else{
+//         return "Email tidak ada"
+//     }
+// }
 
-    set saveEmail(email){
-        if(!email.includes("@")){
-            console.log("Email not Valid!")
-        }else{
-            this.#email = email
-        }
-    }
-}
+//     set saveEmail(email){
+//         if(!email.includes("@")){
+//             console.log("Email not Valid!")
+//         }else{
+//             this.#email = email
+//         }
+//     }
+// }
 
-let user2 = new User1("Gilang")
-user2.saveEmail = "gilang.ramadhan011297gmail.com"
-console.log(user2.getEmail)
-console.log(user2)
+// let user2 = new User1("Gilang")
+// user2.saveEmail = "gilang.ramadhan011297gmail.com"
+// console.log(user2.getEmail)
+// console.log(user2)
 
-// Static properties
-class ClassWithStaticMethod {
-    static staticProperty = 'someValue';
-    static staticMethod() {
-        return 'static method has been called.';
-    }
-}
-console.log(ClassWithStaticMethod.staticProperty);
-// output: "someValue"
-console.log(ClassWithStaticMethod.staticMethod());
-// output: "static method has been called."
+// // Static properties
+// class ClassWithStaticMethod {
+//     static staticProperty = 'someValue';
+//     static staticMethod() {
+//         return 'static method has been called.';
+//     }
+// }
+// console.log(ClassWithStaticMethod.staticProperty);
+// // output: "someValue"
+// console.log(ClassWithStaticMethod.staticMethod());
+// // output: "static method has been called."
