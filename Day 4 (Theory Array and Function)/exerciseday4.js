@@ -38,18 +38,58 @@
 // 07 08 09 10
 // ● Parameters : height → triangle height
 
-let pyramid = () => {
-    let height = 9;
-    let output = '';
-    for(let i=1; i<=height; i++){
-        for(let a=1; a<=i; a++){
-            output += '0' + a + ' ';
-        }
-        console.log(output);
-        output = '';
+// let pyramid = (height) => {
+//     let output = '';
+//     for(let i=1; i<=height; i++){
+//         for(let a=1; a<=i; a++){
+//             output += a + ' ';
+//         }
+//         console.log(output);
+//         output = '\n';
+//     }
+// }
+// pyramid(10)
+
+
+
+// let star =''
+// let number = 1
+// for(let i=1; i<=3; i++){
+//     for(let j=1; j<=i; j++){
+//         star += number
+//         number++
+//     }
+//     star += '\n'
+// }
+// console.log(star)
+
+
+// // Reverser Stars
+// let star =''
+// let number = 1
+// for(let i=10; 1 <= i; i--){
+//     for(let j=1; j<=i; j++){
+//         star += "*"
+//         number++
+//     }
+//     star += '\n'
+// }
+// console.log(star)
+
+//triangle patern
+//setiap perbedaan i dan j selisih 3, karena index dimuali dari 0
+let star =''
+for(let i=12; 0 <= i; i--){
+    for(let j=0; j <= 15; j++){
+       if(j >= i && j <= 15-i){
+           star += "*"
+       }else{
+           star += '-'
+       }
     }
+    star += '\n'
 }
-pyramid()
+console.log(star)
 
 // exercise number 5
 // Write a function to split a string and convert it into an array of words 
