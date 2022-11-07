@@ -1,5 +1,6 @@
 // // class
 // digunakan untuk membuat sebuah object dengan nama key yang seragam
+// class itu cetakan untuk membuat object
 
 
 // class Products { //jika menggunakan class declaration menggunakan huruf besar pada pertama

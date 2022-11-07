@@ -1,1 +1,4 @@
-console.log(parseInt("123asdsadsa"))
+let str = "Garuda di dadaku".split(" ")
+
+console.log(str)
+

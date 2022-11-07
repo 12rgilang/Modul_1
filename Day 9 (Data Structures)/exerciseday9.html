@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+
+    // Market Checkout html
+    // 1. membuat data yang tersedia
+
+    function CheckInput(user) {
+      if (user < 1 || user > produk.length) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    let word = ``
+    let receipt = ``
+    let addToCart = []
+    let jumlah = ``
+    let word2 = ``
+    
+    let produk = [
+      { id: 1, name: "Apel", price: 10000, stock: 10 },
+      { id: 2, name: "Jeruk", price: 15000, stock: 15 },
+      { id: 3, name: "Mangga", price: 20000, stock: 20 },
+    ];
+
+   
+    for (let i = 0; i < produk.length; i++) {
+      word += `${produk[i].id}. ${produk[i].name} = Rp.${produk[i].price.toLocaleString()}(${produk[i].stock})\n`;
+    }
+
+    //step 3. Munculkkan Promptnya Masukkan angka produk
+    do {
+      do{
+      var inputUser = prompt(`${word} \n Silahkan Masukan Nomor Product`); // 1
+
+      if (CheckInput(inputUser) === false) {
+        // 1 ---> return true
+        alert("Product Tidak Ditemukan");
+      } else if (isNaN(inputUser)){
+        alert("Invalid input")
+      }
+      addToCart.push(inputUser)
+      jumlah = inputUser;
+      word2 += `${addToCart.length}. ${produk[jumlah-1].name} - RP.${produk[jumlah-1].price}` //kenapa kurang 1? karena index dimulai dari 0 dan pilihan user tidak ada 0
+    } while (isNaN(inputUser) === true || CheckInput(inputUser) === false );
+    
+    do{
+      var inputUser2 = parseInt(prompt(`Silahkan Masukan quantity produk: `))
+      if(isNaN(inputUser2)){
+        alert("Input invalid")
+        continue
+      }else if(inputUser2 > produk[jumlah-1].stock){
+        alert("Stock tidak cukup")
+        continue
+      }else{alert("Product berhasil ditambahkan ke keranjang")}
+      word2 += `x ${inputUser2}`
+    }while(isNaN(inputUser2) || inputUser2 > produk[jumlah-1].stock);
+
+    do{
+      var inputUser3 = parseInt(prompt("Pilih menu dibawah ini: \n 1. Checkout \n2. Lanjutkan Belanja"))
+      if(CheckInput(inputUser3) === false){
+        alert("Input invalid")
+        continue
+      }else if (inputUser3 < 1){
+        alert("Pilih angka 1 / 2")
+      }else if(inputUser3 > 3){
+        alert("Pilih angka 1 / 2")
+      }
+
+      if(inputUser3==1){
+        inputUser++
+      }else if(inputUser3 ==2 ){
+        inputUser = 0
+        inputUser2 = 0
+        inputUser++
+      }
+    }while((CheckInput(inputUser2) === false))
+  }while((CheckInput(inputUser2) === false))
+    </script>
+</html>
