@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let freeWay = [
+    {id: 1, name: "Jakarta", price: 100000},
+    {id: 2, name: "Cirebon", price: 150000},
+    {id: 3, name: "Semarang",price: 200000},
+    {id: 4, name: "Jombang", price: 250000},
+    {id: 5, name: "Surabya", price: 300000},
+]
+
+let showData = ``
+
+freeWay.forEach((value, index) => {
+    showData += `${value.id}. tujuan ${value.name} harga = Rp.${value.price.toLocaleString()} \n`
+})
+
+let masuk = parseInt(prompt(`${showData}\nkemana Tujuan Anda?`)) - 1
+let keluar = parseInt(prompt(`${showData}\nkeluar kemana?`))-1
+
+let totalPrice = 0
+for(let i=masuk; i <= keluar; i++){
+    totalPrice += freeWay[i].price
+}
+
+alert(`masuk dari ${freeWay[masuk].name} dengan harga = Rp.${freeWay[masuk].price.toLocaleString()}\nkeluar ke ${freeWay[keluar].name} dengan harga = Rp.${freeWay[keluar].price.toLocaleString()}\n\nTotal harga Toll = Rp.${totalPrice.toLocaleString()}
+`)
+
+
+
+
+</script>
+</html>
