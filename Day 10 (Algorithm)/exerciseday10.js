@@ -35,6 +35,7 @@
 // console.log(MyName("gilang ramadhan"))
 
     // // 2. 
+<<<<<<< HEAD
     // function MaxRange(AngkaPertama, MAxRange, Range){
     //     let newArr = []
     //     for(i=AngkaPertama; i<=MAxRange; i+=Range){
@@ -44,4 +45,15 @@
     //     return newArr
     // }
     // console.log(MaxRange(2,10,2))
+=======
+    function MaxRange(AngkaPertama, MAxRange, Range){
+        let newArr = []
+        for(i=AngkaPertama; i<=MAxRange; i+=Range){
+            newArr.push(i)
+        }
+
+        return newArr
+    }
+    console.log(MaxRange(2,15,2))
+>>>>>>> 2e73954 (Updates)
 
